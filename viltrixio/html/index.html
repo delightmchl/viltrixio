@@ -1,181 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Viltrixio — Driven by Design</title>
-        <meta name="description" content="Viltrixio — Innovative performance cars blending design, technology, and sustainability.">
-        <style>
-            :root{--accent:#0b6efd;--dark:#0b1220;--muted:#6b7280;--card:#ffffff}
-            *{box-sizing:border-box}
-            body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,-apple-system,'Helvetica Neue',Arial;color:var(--dark);background:#f7f8fb}
-            header{background:#fff;box-shadow:0 2px 8px rgba(12,18,27,.06);position:sticky;top:0;z-index:40}
-            .container{max-width:1100px;margin:0 auto;padding:0 20px}
-            .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-            .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--dark)}
-            .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
-            nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0;align-items:center}
-            nav a{color:var(--dark);text-decoration:none;font-weight:600}
-            .btn{background:var(--accent);color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-weight:700}
-            .mobile-toggle{display:none}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            /* Hero */
-            .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:64px 0}
-            .hero .eyebrow{color:var(--muted);font-weight:600}
-            .hero h1{font-size:40px;margin:10px 0 16px;line-height:1.02}
-            .hero p{color:var(--muted);margin:0 0 20px}
-            .hero-actions{display:flex;gap:12px}
-            .hero-visual{border-radius:12px;overflow:hidden;background:#111}
-            .model-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-            .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,27,.06);display:flex;flex-direction:column}
-            .card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
-            .card h3{margin:12px 0 6px;font-size:16px}
-            .features{display:flex;gap:16px;margin-top:36px}
-            .feature{background:#fff;border-radius:10px;padding:18px;flex:1;box-shadow:0 6px 18px rgba(12,18,27,.04)}
+<title>Vitrixio | Premium Car Dealership</title>
 
-            footer{padding:36px 0;color:var(--muted);font-size:14px}
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-            @media (max-width:900px){
-                .hero{grid-template-columns:1fr;}
-                .model-cards{grid-template-columns:repeat(2,1fr)}
-                nav ul{display:none}
-                .mobile-toggle{display:block;background:none;border:0;font-size:18px}
-            }
-            @media (max-width:520px){.model-cards{grid-template-columns:1fr}.hero h1{font-size:28px}}
-        </style>
-        <script>
-            // Mobile nav toggle
-            function toggleNav(){const ul=document.querySelector('nav ul');if(!ul) return;ul.style.display = (ul.style.display==='flex')? 'none' : 'flex'}
-        </script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--gold:#D4AF37;
+--dark:#070707;
+--card:#111111;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:var(--dark);
+color:#fff;
+overflow-x:hidden;
+}
+
+.navbar{
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(15px);
+}
+
+.navbar-brand{
+font-size:34px;
+font-weight:700;
+color:var(--gold)!important;
+}
+
+.nav-link{
+color:white!important;
+margin:0 12px;
+}
+
+.hero{
+
+height:100vh;
+
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+
+}
+
+.hero h1{
+
+font-size:70px;
+font-weight:700;
+
+}
+
+.hero span{
+
+color:var(--gold);
+
+}
+
+.hero p{
+
+font-size:18px;
+margin:20px 0 35px;
+
+}
+
+.search-box{
+
+background:white;
+border-radius:20px;
+padding:25px;
+box-shadow:0 20px 50px rgba(0,0,0,.45);
+
+}
+
+.search-box select{
+
+height:55px;
+
+}
+
+.btn-gold{
+
+background:var(--gold);
+color:black;
+font-weight:600;
+height:55px;
+
+}
+
+.btn-gold:hover{
+
+background:#c79d1d;
+
+}
+
+.stats{
+
+margin-top:40px;
+display:flex;
+gap:40px;
+
+}
+
+.stats h3{
+
+color:var(--gold);
+
+}
+
+</style>
+
 </head>
+
 <body>
-    <header>
-        <div class="container nav">
-            <a href="index.html" class="brand">
-                <div class="logo">V</div>
-                <div>
-                    <div style="font-weight:800;letter-spacing:.4px">Viltrixio</div>
-                    <div style="font-size:12px;color:var(--muted);margin-top:2px">Driven by Design</div>
-                </div>
-            </a>
-            <nav>
-                <button class="mobile-toggle" aria-label="Toggle navigation" onclick="toggleNav()">☰</button>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="cars.html">Models</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a class="btn" href="cars.html">Explore Cars</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <main class="container">
-        <section class="hero">
-            <div>
-                <div class="eyebrow">2026 Collection</div>
-                <h1>Performance cars reimagined for the road and the moment</h1>
-                <p>Viltrixio blends premium engineering, sustainable materials, and modern design to deliver an exhilarating driving experience.</p>
-                <div class="hero-actions">
-                    <a class="btn" href="cars.html">View Models</a>
-                    <a href="about.html" style="padding:9px 14px;border-radius:8px;background:transparent;color:var(--dark);text-decoration:none;border:1px solid rgba(11,14,22,.06);font-weight:700">Our Story</a>
-                </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
 
-                <div class="model-cards">
-                    <div class="card">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viltrixio — Driven by Design</title>
-    <meta name="description" content="Viltrixio — Innovative performance cars blending design, technology, and sustainability.">
-    <style>
-      :root{--accent:#0b6efd;--dark:#0b1220;--muted:#6b7280;--card:#ffffff}
-      *{box-sizing:border-box}
-      body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,-apple-system,'Helvetica Neue',Arial;color:var(--dark);background:#f7f8fb}
-      header{background:#fff;box-shadow:0 2px 8px rgba(12,18,27,.06);position:sticky;top:0;z-index:40}
-      .container{max-width:1100px;margin:0 auto;padding:0 20px}
-      .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-      .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--dark)}
-      .logo{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
-      nav ul{list-style:none;display:flex;gap:18px;margin:0;padding:0;align-items:center}
-      nav a{color:var(--dark);text-decoration:none;font-weight:600}
-      .btn{background:var(--accent);color:#fff;padding:9px 14px;border-radius:8px;text-decoration:none;font-weight:700}
-      .mobile-toggle{display:none}
+<div class="container">
 
-      /* Hero */
-      .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:64px 0}
-      .hero .eyebrow{color:var(--muted);font-weight:600}
-      .hero h1{font-size:40px;margin:10px 0 16px;line-height:1.02}
-      .hero p{color:var(--muted);margin:0 0 20px}
-      .hero-actions{display:flex;gap:12px}
-      .hero-visual{border-radius:12px;overflow:hidden;background:#111}
-      .model-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
-      .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(12,18,27,.06);display:flex;flex-direction:column}
-      .card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
-      .card h3{margin:12px 0 6px;font-size:16px}
-      .features{display:flex;gap:16px;margin-top:36px}
-      .feature{background:#fff;border-radius:10px;padding:18px;flex:1;box-shadow:0 6px 18px rgba(12,18,27,.04)}
+<a class="navbar-brand" href="#">VITRIXIO</a>
 
-      footer{padding:36px 0;color:var(--muted);font-size:14px}
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
 
-      @media (max-width:900px){
-        .hero{grid-template-columns:1fr;}
-        .model-cards{grid-template-columns:repeat(2,1fr)}
-        nav ul{display:none}
-        .mobile-toggle{display:block;background:none;border:0;font-size:18px}
-      }
-      @media (max-width:520px){.model-cards{grid-template-columns:1fr}.hero h1{font-size:28px}}
-    </style>
-    <script>
-      // Mobile nav toggle
-      function toggleNav(){const ul=document.querySelector('nav ul');if(!ul) return;ul.style.display = (ul.style.display==='flex')? 'none' : 'flex'}
-    </script>
-                    </div>
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=800&q=60" alt="Viltrixio GT">
-                        <h3>Viltrixio GT</h3>
-                        <div style="color:var(--muted);font-size:13px">Grand tourer — refined comfort and long-distance performance</div>
-                    </div>
-                    <div class="card">
-                        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=800&q=60" alt="Viltrixio E">
-                        <h3>Viltrixio E</h3>
-                        <div style="color:var(--muted);font-size:13px">Electric SUV — family-friendly with sports-derived dynamics</div>
-                    </div>
-                </div>
-            </div>
+<span class="navbar-toggler-icon"></span>
 
-            <div class="hero-visual">
-                <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1200&q=70" alt="Viltrixio hero" style="width:100%;height:420px;object-fit:cover">
-            </div>
-        </section>
+</button>
 
-        <section class="features" aria-label="Highlights">
-            <div class="feature">
-                <strong>Design</strong>
-                <p style="margin:8px 0 0;color:var(--muted)">Sculpted forms, lightweight structures, and cabin-first ergonomics.</p>
-            </div>
-            <div class="feature">
-                <strong>Technology</strong>
-                <p style="margin:8px 0 0;color:var(--muted)">Connected systems, advanced driver-assist, and over-the-air updates.</p>
-            </div>
-            <div class="feature">
-                <strong>Sustainability</strong>
-                <p style="margin:8px 0 0;color:var(--muted)">Recycled interior materials and efficient powertrains for lower CO2 impact.</p>
-            </div>
-        </section>
-    </main>
+<div class="collapse navbar-collapse" id="menu">
 
-    <footer>
-        <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
-            <div>
-                <div style="font-weight:800">Viltrixio</div>
-                <div style="color:var(--muted);margin-top:6px">© 2026 Viltrixio. All rights reserved.</div>
-            </div>
-            <div style="display:flex;gap:12px;align-items:center;margin-top:8px">
-                <a href="#" style="color:var(--muted);text-decoration:none">Privacy</a>
-                <a href="#" style="color:var(--muted);text-decoration:none">Terms</a>
-                <a href="contact.html" style="color:var(--muted);text-decoration:none">Contact</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Inventory</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Brands</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Finance</a></li>
+<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+
+</ul>
+
+<a class="btn btn-warning ms-3 px-4 rounded-pill">
+Sell Your Car
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1>
+
+Find Your <span>Dream Car</span>
+
+Today
+
+</h1>
+
+<p>
+
+Explore thousands of certified new and used vehicles from trusted dealers across the country.
+
+Luxury, performance, SUVs, electric vehicles, and more.
+
+</p>
+
+<div class="stats">
+
+<div>
+
+<h3>25K+</h3>
+
+<p>Cars Available</p>
+
+</div>
+
+<div>
+
+<h3>300+</h3>
+
+<p>Trusted Dealers</p>
+
+</div>
+
+<div>
+
+<h3>99%</h3>
+
+<p>Happy Buyers</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-lg-6">
+
+<div class="search-box">
+
+<div class="row g-3">
+
+<div class="col-md-6">
+
+<select class="form-select">
+<option>Brand</option>
+<option>Mercedes-Benz</option>
+<option>BMW</option>
+<option>Toyota</option>
+<option>Audi</option>
+<option>Lexus</option>
+</select>
+
+</div>
+
+<div class="col-md-6">
+
+<select class="form-select">
+
+<option>Model</option>
+
+<option>SUV</option>
+<option>Sedan</option>
+<option>Coupe</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6">
+
+<select class="form-select">
+
+<option>Year</option>
+
+<option>2025</option>
+<option>2024</option>
+<option>2023</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6">
+
+<select class="form-select">
+
+<option>Budget</option>
+
+<option>$10k+</option>
+<option>$30k+</option>
+<option>$50k+</option>
+<option>$100k+</option>
+
+</select>
+
+</div>
+
+<div class="col-12">
+
+<button class="btn btn-gold w-100">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Search Inventory
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
